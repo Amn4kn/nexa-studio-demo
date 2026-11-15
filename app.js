@@ -41,7 +41,14 @@
 
   /* Reveal on scroll with stagger */
   const io = new IntersectionObserver(entries => {
-    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target;
+      el.classList.add('in'); io.unobserve(el);
+      // une fois apparu, on rend la main aux transitions propres de l'élément (hover des cartes)
+      const end = e => { if (e.target !== el || e.propertyName !== 'transform') return; el.removeEventListener('transitionend', end); el.classList.remove('reveal', 'in'); el.style.removeProperty('--d'); };
+      el.addEventListener('transitionend', end);
+    });
   }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
   $$('.reveal').forEach(el => {
     const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
