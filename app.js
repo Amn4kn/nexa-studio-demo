@@ -82,6 +82,10 @@
 
   const calc = () => {
     const t = TYPES[sim.type.value];
+    // une landing page = 1 page, comme dans l'offre Essentiel
+    const isLanding = sim.type.value === 'landing';
+    if (isLanding) range.value = 1;
+    range.disabled = isLanding;
     const pages = +range.value;
     pagesOut.textContent = pages;
     range.style.setProperty('--p', ((pages - 1) / 14 * 100) + '%');
@@ -92,7 +96,8 @@
     let total = rows.reduce((s, r) => s + r[1], 0);
     const rush = sim.rush.value === '1';
     if (rush) { rows.push(['Délai prioritaire (+25 %)', round(total * .25)]); total = round(total * 1.25); }
-    const lo = round(total * .92), hi = round(total * 1.12);
+    // borne basse = tarif "dès" des offres, jamais en dessous
+    const lo = round(total), hi = round(total * 1.2);
     let [w1, w2] = t.weeks;
     const add = Math.floor(extra / 4) + $$('input[name=opt]:checked', sim).length * .5;
     w1 += Math.floor(add); w2 += Math.ceil(add);

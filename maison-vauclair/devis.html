@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demande de devis — Maison Vauclair (démonstration)</title>
+<meta name="description" content="Décrivez votre besoin et joignez des photos pour recevoir un devis (démonstration).">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f3f1ec">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap">
+<link rel="stylesheet" href="vauclair.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="nobar">
+<a class="skip" href="#main">Aller au contenu</a>
+<aside class="demo" aria-label="Mention de démonstration"><div class="wrap"><p><b>Site de démonstration</b> — Maison Vauclair est un garage fictif conçu par Nexa Studio. Aucune réservation ni demande n’est transmise.</p><a href="../#realisations">← Retour à Nexa Studio</a></div></aside>
+<header class="hd" id="hd">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand__mk" aria-hidden="true">V</span><span class="brand__tx">Maison Vauclair<small>Mécanique · Carrosserie</small></span></a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="rendez-vous.html">Rendez-vous</a>
+      <a href="devis.html" aria-current="page">Devis</a>
+    </nav>
+    <a class="hd__tel" href="tel:+33199001234">01 99 00 12 34</a>
+    <a class="btn btn--accent btn--sm" href="rendez-vous.html">Prendre rendez-vous</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><i></i><i></i></button>
+  </div>
+</header>
+<main id="main">
+<section class="pagehead"><div class="wrap">
+  <p class="crumbs"><a href="index.html">Accueil</a> / Devis</p>
+  <h1>Demande de devis</h1>
+  <p>Décrivez le problème et ajoutez quelques photos : c’est souvent suffisant pour un premier chiffrage. <span class="demo-tag">Mode démo</span></p>
+</div></section>
+<section class="sec" style="padding-top:48px">
+  <div class="wrap formwrap">
+    <div class="panel">
+      <form id="quote" novalidate>
+        <div class="group">
+          <p class="grp-lbl" id="typeLbl">Type de travaux *</p>
+          <div class="picks" role="radiogroup" aria-labelledby="typeLbl">
+            <label class="pick"><input type="radio" name="type" value="meca"><span><b>Mécanique</b><small>Panne, bruit, entretien</small></span></label><label class="pick"><input type="radio" name="type" value="carro"><span><b>Carrosserie</b><small>Choc, rayure, peinture</small></span></label><label class="pick"><input type="radio" name="type" value="esth"><span><b>Esthétique</b><small>Polissage, phares, intérieur</small></span></label><label class="pick"><input type="radio" name="type" value="autre"><span><b>Autre</b><small>Je ne sais pas</small></span></label>
+          </div>
+          <p class="err" id="e-type" role="alert"></p>
+        </div>
+        <div class="fields">
+          <div class="f"><label for="qmake">Marque et modèle *</label><input id="qmake" name="car" required placeholder="ex. Peugeot 308 SW"><p class="err" id="e-car"></p></div>
+          <div class="f"><label for="qyear">Année</label><input id="qyear" name="year" inputmode="numeric" maxlength="4" placeholder="ex. 2019"><p class="err" id="e-year"></p></div>
+          <div class="f f--full"><label for="qdesc">Votre besoin *</label><textarea id="qdesc" name="desc" required placeholder="Ex. : rayure profonde sur la porte arrière droite, environ 20 cm."></textarea><p class="hint"><span id="qcount">0</span> caractère(s) · 20 minimum</p><p class="err" id="e-desc"></p></div>
+          <div class="f f--full">
+            <span style="font-weight:600;font-size:14px">Photos <span class="hint">(facultatif · 6 max · 10 Mo par photo)</span></span>
+            <div class="drop" id="drop" role="button" tabindex="0" aria-describedby="dropHint"><b>Ajouter des photos</b><span id="dropHint">Glissez-déposez ou cliquez pour choisir. Les photos restent sur votre appareil.</span></div>
+            <input class="sr" type="file" id="files" accept="image/*" multiple tabindex="-1" aria-label="Choisir des photos">
+            <div class="thumbs" id="thumbs"></div>
+            <p class="err" id="e-files" role="alert"></p>
+          </div>
+          <div class="f"><label for="qname">Nom *</label><input id="qname" name="name" autocomplete="name" required><p class="err" id="e-name"></p></div>
+          <div class="f"><label for="qphone">Téléphone *</label><input id="qphone" name="phone" type="tel" autocomplete="tel" required><p class="err" id="e-phone"></p></div>
+          <div class="f f--full"><label for="qemail">E-mail *</label><input id="qemail" name="email" type="email" autocomplete="email" required><p class="err" id="e-email"></p></div>
+          <div class="f f--full"><span style="font-weight:600;font-size:14px" id="cbLbl">Je préfère être recontacté par</span>
+            <div class="picks" role="radiogroup" aria-labelledby="cbLbl"><label class="pick"><input type="radio" name="cb" value="tel" checked><span><b>Téléphone</b></span></label><label class="pick"><input type="radio" name="cb" value="mail"><span><b>E-mail</b></span></label></div></div>
+          <label class="consent f--full"><input type="checkbox" name="consent" required><span>J’accepte que mes informations soient utilisées pour établir ce devis. *</span></label>
+          <p class="err f--full" id="e-consent"></p>
+        </div>
+        <div class="nav-steps"><button class="btn btn--accent" type="submit">Envoyer ma demande</button></div>
+      </form>
+      <div class="done" id="quoteDone" hidden tabindex="-1">
+        <div class="done__ico" aria-hidden="true">✓</div>
+        <h2>Demande prête</h2>
+        <p id="qDoneTxt"></p>
+        <p>Référence de démonstration : <span class="ref" id="qRef"></span></p>
+        <p><span class="demo-tag">Démo</span> Rien n’a été transmis : les informations et les photos n’ont pas quitté votre navigateur.</p>
+        <div class="btns"><a class="btn btn--line" href="index.html">Retour à l’accueil</a><button class="btn" type="button" id="qRestart">Nouvelle simulation</button></div>
+      </div>
+    </div>
+    <aside class="panel summary">
+      <h2 class="sum-h">Comment ça marche</h2>
+      <ol style="display:grid;gap:14px;counter-reset:q">
+        <li><b>1. Vous décrivez</b><br><span class="muted">Le problème, le véhicule, quelques photos.</span></li>
+        <li><b>2. On chiffre</b><br><span class="muted">Une première estimation, ou une proposition d’examen à l’atelier si nécessaire.</span></li>
+        <li><b>3. Vous décidez</b><br><span class="muted">Aucun engagement tant que vous n’avez pas validé le devis.</span></li>
+      </ol>
+      <p class="note">Besoin d’un créneau pour une prestation simple ? <a class="link" href="rendez-vous.html">Réservez directement</a>.</p>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand__mk" aria-hidden="true">V</span><span class="brand__tx">Maison Vauclair</span></a>
+        <p style="margin-top:16px;max-width:320px">Garage indépendant de démonstration : mécanique toutes marques, carrosserie et préparation esthétique.</p>
+      </div>
+      <div><h2 class="ft__h">Prestations</h2><ul><li><a href="prestations.html#meca">Mécanique</a></li><li><a href="prestations.html#carro">Carrosserie</a></li><li><a href="prestations.html#esth">Esthétique</a></li></ul></div>
+      <div><h2 class="ft__h">Atelier</h2><ul><li>14 rue des Ateliers</li><li>Adresse fictive</li><li><a href="tel:+33199001234">01 99 00 12 34</a></li><li>Lun–Ven 8 h–18 h 30 · Sam 9 h–12 h</li></ul></div>
+      <div><h2 class="ft__h">Démonstration</h2><ul><li><a href="../">Conçu par Nexa Studio</a></li><li><a href="realisations.html#credits">Crédits photos</a></li><li>Tarifs et disponibilités fictifs</li></ul></div>
+    </div>
+    <div class="ft__bottom"><p>© <span data-year>2026</span> Maison Vauclair — garage fictif. Le numéro 01 99 00 12 34 appartient à la tranche réservée à la fiction.</p><p>Photos d’illustration : <a href="realisations.html#credits">Unsplash</a></p></div>
+  </div>
+</footer>
+
+<script src="vauclair.js" defer></script>
+</body>
+</html>

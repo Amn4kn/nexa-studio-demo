@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prendre rendez-vous — Maison Vauclair (démonstration)</title>
+<meta name="description" content="Réservez un créneau à l’atelier en quelques étapes (démonstration).">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f3f1ec">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap">
+<link rel="stylesheet" href="vauclair.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="nobar">
+<a class="skip" href="#main">Aller au contenu</a>
+<aside class="demo" aria-label="Mention de démonstration"><div class="wrap"><p><b>Site de démonstration</b> — Maison Vauclair est un garage fictif conçu par Nexa Studio. Aucune réservation ni demande n’est transmise.</p><a href="../#realisations">← Retour à Nexa Studio</a></div></aside>
+<header class="hd" id="hd">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand__mk" aria-hidden="true">V</span><span class="brand__tx">Maison Vauclair<small>Mécanique · Carrosserie</small></span></a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="rendez-vous.html" aria-current="page">Rendez-vous</a>
+      <a href="devis.html">Devis</a>
+    </nav>
+    <a class="hd__tel" href="tel:+33199001234">01 99 00 12 34</a>
+    <a class="btn btn--accent btn--sm" href="rendez-vous.html">Prendre rendez-vous</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><i></i><i></i></button>
+  </div>
+</header>
+<main id="main">
+<section class="pagehead"><div class="wrap">
+  <p class="crumbs"><a href="index.html">Accueil</a> / Rendez-vous</p>
+  <h1>Prendre rendez-vous</h1>
+  <p>Choisissez vos prestations et un créneau. <span class="demo-tag">Mode démo</span> Les disponibilités sont simulées et aucune réservation n’est transmise.</p>
+</div></section>
+<section class="sec" style="padding-top:48px">
+  <div class="wrap formwrap">
+    <div class="panel">
+      <form id="book" novalidate>
+        <div class="progress" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+        <p class="steplabel" id="stepLabel" aria-live="polite">Étape 1 sur 4</p>
+
+        <fieldset class="step" data-step="1" style="border:0;margin:0;padding:0">
+          <legend><h2 tabindex="-1">Vos prestations</h2></legend>
+          <p>Sélectionnez une ou plusieurs prestations.</p>
+          <div class="group"><h3>Entretien & mécanique</h3><div class="picks"><label class="pick"><input type="checkbox" name="svc" value="vidange"><span><b>Vidange & filtres</b><small>dès 89 € · 1 h</small></span></label><label class="pick"><input type="checkbox" name="svc" value="revision"><span><b>Révision constructeur</b><small>dès 149 € · 2 h</small></span></label><label class="pick"><input type="checkbox" name="svc" value="freins"><span><b>Disques & plaquettes</b><small>dès 189 € · 2 h</small></span></label><label class="pick"><input type="checkbox" name="svc" value="distribution"><span><b>Kit de distribution</b><small>dès 390 € · 4 h</small></span></label><label class="pick"><input type="checkbox" name="svc" value="diagnostic"><span><b>Diagnostic électronique</b><small>dès 59 € · 45 min</small></span></label><label class="pick"><input type="checkbox" name="svc" value="clim"><span><b>Recharge de climatisation</b><small>dès 79 € · 1 h</small></span></label></div></div>
+          <div class="group"><h3>Carrosserie & peinture</h3><div class="picks"><label class="pick"><input type="checkbox" name="svc" value="expertise"><span><b>Estimation carrosserie sur place</b><small>Gratuit · 30 min</small></span></label></div></div>
+          <div class="group"><h3>Préparation esthétique</h3><div class="picks"><label class="pick"><input type="checkbox" name="svc" value="polissage"><span><b>Polissage & correction de vernis</b><small>dès 190 € · 1 jour</small></span></label><label class="pick"><input type="checkbox" name="svc" value="phares"><span><b>Rénovation de phares</b><small>dès 59 € · 1 h</small></span></label><label class="pick"><input type="checkbox" name="svc" value="interieur"><span><b>Nettoyage intérieur complet</b><small>dès 119 € · 3 h</small></span></label></div></div>
+          <p class="err" id="e-svc" role="alert"></p>
+          <p class="muted" style="font-size:14px">Travaux de carrosserie : <a class="link" href="devis.html?type=carro">demandez plutôt un devis</a>.</p>
+        </fieldset>
+
+        <fieldset class="step" data-step="2" hidden style="border:0;margin:0;padding:0">
+          <legend><h2 tabindex="-1">Votre véhicule</h2></legend>
+          <p>Pour préparer les bonnes pièces avant votre arrivée.</p>
+          <div class="fields">
+            <div class="f"><label for="make">Marque *</label><select id="make" name="make" required><option value="">Choisir…</option><option>Audi</option><option>BMW</option><option>Citroën</option><option>Dacia</option><option>Fiat</option><option>Ford</option><option>Hyundai</option><option>Kia</option><option>Mercedes-Benz</option><option>Nissan</option><option>Opel</option><option>Peugeot</option><option>Renault</option><option>Seat</option><option>Škoda</option><option>Tesla</option><option>Toyota</option><option>Volkswagen</option><option>Volvo</option><option>Autre</option></select><p class="err" id="e-make"></p></div>
+            <div class="f"><label for="model">Modèle *</label><input id="model" name="model" required autocomplete="off" placeholder="ex. Clio IV 1.5 dCi"><p class="err" id="e-model"></p></div>
+            <div class="f"><label for="year">Année *</label><select id="year" name="year" required><option value="">Choisir…</option></select><p class="err" id="e-year"></p></div>
+            <div class="f"><label for="km">Kilométrage</label><input id="km" name="km" inputmode="numeric" placeholder="ex. 84 000"><p class="err" id="e-km"></p></div>
+            <div class="f f--full"><label for="plate">Immatriculation <span class="hint">(facultatif)</span></label><input id="plate" name="plate" autocomplete="off" placeholder="AB-123-CD" style="text-transform:uppercase"><p class="err" id="e-plate"></p></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" data-step="3" hidden style="border:0;margin:0;padding:0">
+          <legend><h2 tabindex="-1">Date et heure</h2></legend>
+          <p>Déposez votre véhicule au créneau choisi. <span class="demo-tag">Disponibilités simulées</span></p>
+          <p class="cal__month" id="calMonth"></p>
+          <div class="cal" id="cal" role="group" aria-label="Choisir un jour"></div>
+          <div class="slots" id="slots" role="group" aria-label="Choisir un horaire"></div>
+          <div class="legend"><span>Barré : complet</span><span>Pointillé : fermé</span></div>
+          <p class="err" id="e-when" role="alert"></p>
+        </fieldset>
+
+        <fieldset class="step" data-step="4" hidden style="border:0;margin:0;padding:0">
+          <legend><h2 tabindex="-1">Vos coordonnées</h2></legend>
+          <p>Pour vous confirmer le rendez-vous et vous prévenir en cas d’imprévu.</p>
+          <div class="fields">
+            <div class="f"><label for="name">Nom et prénom *</label><input id="name" name="name" autocomplete="name" required><p class="err" id="e-name"></p></div>
+            <div class="f"><label for="phone">Téléphone *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="06 12 34 56 78"><p class="err" id="e-phone"></p></div>
+            <div class="f f--full"><label for="email">E-mail *</label><input id="email" name="email" type="email" autocomplete="email" required><p class="err" id="e-email"></p></div>
+            <div class="f f--full"><label for="note">Précisions <span class="hint">(facultatif)</span></label><textarea id="note" name="note" rows="3" placeholder="Bruit, voyant allumé, contrainte horaire…"></textarea></div>
+            <label class="consent f--full"><input type="checkbox" id="consent" name="consent" required><span>J’accepte que mes informations soient utilisées pour gérer ce rendez-vous. *</span></label>
+            <p class="err f--full" id="e-consent"></p>
+          </div>
+        </fieldset>
+
+        <div class="nav-steps">
+          <button class="btn btn--line" type="button" id="prev" hidden>← Retour</button>
+          <button class="btn btn--accent" type="button" id="next">Continuer →</button>
+        </div>
+      </form>
+      <div class="done" id="bookDone" hidden tabindex="-1">
+        <div class="done__ico" aria-hidden="true">✓</div>
+        <h2>Demande prête</h2>
+        <p id="doneTxt"></p>
+        <p>Référence de démonstration : <span class="ref" id="doneRef"></span></p>
+        <p><span class="demo-tag">Démo</span> Dans un site réel, l’atelier recevrait cette demande et vous enverrait une confirmation. Ici, rien n’a été transmis ni enregistré.</p>
+        <div class="btns"><a class="btn btn--line" href="index.html">Retour à l’accueil</a><button class="btn" type="button" id="restart">Nouvelle simulation</button></div>
+      </div>
+    </div>
+    <aside class="panel summary" aria-label="Récapitulatif">
+      <h2 class="sum-h">Récapitulatif</h2>
+      <dl>
+        <div><dt>Prestations</dt><dd id="sSvc">—</dd></div>
+        <div><dt>Durée estimée</dt><dd id="sDur">—</dd></div>
+        <div><dt>Véhicule</dt><dd id="sCar">—</dd></div>
+        <div><dt>Dépôt</dt><dd id="sWhen">—</dd></div>
+      </dl>
+      <div class="tot"><span>À partir de</span><b id="sTot">0 €</b></div>
+      <p class="note">Prix indicatif fictif. Le montant final est confirmé par devis avant intervention.</p>
+    </aside>
+  </div>
+</section>
+<script type="application/json" id="svcData">{"vidange":{"n":"Vidange & filtres","p":89,"d":60},"revision":{"n":"Révision constructeur","p":149,"d":120},"freins":{"n":"Disques & plaquettes","p":189,"d":120},"distribution":{"n":"Kit de distribution","p":390,"d":240},"diagnostic":{"n":"Diagnostic électronique","p":59,"d":45},"clim":{"n":"Recharge de climatisation","p":79,"d":60},"expertise":{"n":"Estimation carrosserie sur place","p":0,"d":30},"polissage":{"n":"Polissage & correction de vernis","p":190,"d":480},"phares":{"n":"Rénovation de phares","p":59,"d":60},"interieur":{"n":"Nettoyage intérieur complet","p":119,"d":180}}</script>
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand__mk" aria-hidden="true">V</span><span class="brand__tx">Maison Vauclair</span></a>
+        <p style="margin-top:16px;max-width:320px">Garage indépendant de démonstration : mécanique toutes marques, carrosserie et préparation esthétique.</p>
+      </div>
+      <div><h2 class="ft__h">Prestations</h2><ul><li><a href="prestations.html#meca">Mécanique</a></li><li><a href="prestations.html#carro">Carrosserie</a></li><li><a href="prestations.html#esth">Esthétique</a></li></ul></div>
+      <div><h2 class="ft__h">Atelier</h2><ul><li>14 rue des Ateliers</li><li>Adresse fictive</li><li><a href="tel:+33199001234">01 99 00 12 34</a></li><li>Lun–Ven 8 h–18 h 30 · Sam 9 h–12 h</li></ul></div>
+      <div><h2 class="ft__h">Démonstration</h2><ul><li><a href="../">Conçu par Nexa Studio</a></li><li><a href="realisations.html#credits">Crédits photos</a></li><li>Tarifs et disponibilités fictifs</li></ul></div>
+    </div>
+    <div class="ft__bottom"><p>© <span data-year>2026</span> Maison Vauclair — garage fictif. Le numéro 01 99 00 12 34 appartient à la tranche réservée à la fiction.</p><p>Photos d’illustration : <a href="realisations.html#credits">Unsplash</a></p></div>
+  </div>
+</footer>
+
+<script src="vauclair.js" defer></script>
+</body>
+</html>
