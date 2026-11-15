@@ -51,6 +51,9 @@
       if (e.isIntersecting) tabs.forEach(a => a.classList.toggle('is-active', a.hash === '#' + e.target.id));
     }), { rootMargin: '-40% 0px -55% 0px' });
     tabs.forEach(a => spy.observe($(a.hash)));
+    // en haut de page, l'onglet actif est toujours le premier
+    const top = () => { if (scrollY < $(tabs[0].hash).offsetTop - 200) tabs.forEach((a, i) => a.classList.toggle('is-active', i === 0)); };
+    addEventListener('scroll', top, { passive: true }); top();
   }
 
   /* ---------- Galerie + visionneuse ---------- */
@@ -177,6 +180,13 @@
       const car = [book.elements.make.value, book.elements.model.value.trim(), book.elements.year.value].filter(Boolean).join(' ');
       $('#sCar').textContent = car || '—';
       $('#sWhen').textContent = pick.day !== null ? long(days[pick.day]) + (pick.slot ? ' à ' + pick.slot.replace(':', ' h ') : '') : '—';
+      // mini-récapitulatif collant (mobile / tablette), doublon visuel du récapitulatif complet
+      const ms = $('#mSvc');
+      if (ms) {
+        ms.textContent = c.length ? (c.length > 1 ? `${c.length} prestations` : c[0].n) : 'Aucune prestation';
+        $('#mTot').textContent = (c.length ? 'dès ' : '') + fmt(c.reduce((a, s) => a + s.p, 0));
+        $('#mWhen').textContent = $('#sWhen').textContent === '—' ? '' : $('#sWhen').textContent;
+      }
     };
     book.addEventListener('input', summary); book.addEventListener('change', summary);
 
@@ -201,7 +211,7 @@
       if (cur < 4) return go(cur + 1);
       $('#doneTxt').textContent = `${chosen().map(s => s.n).join(', ')} — ${$('#sWhen').textContent}.`;
       $('#doneRef').textContent = ref();
-      book.hidden = true; const d = $('#bookDone'); d.hidden = false; d.focus();
+      book.hidden = true; const ms = $('.msum'); if (ms) ms.hidden = true; const d = $('#bookDone'); d.hidden = false; d.focus();
     });
     prev.addEventListener('click', () => go(cur - 1));
     $$('input,select,textarea', book).forEach(el => { if (RULES[el.name]) live(el, RULES[el.name], 'e-' + el.name); });
@@ -209,7 +219,7 @@
       book.reset(); pick = { day: null, slot: null };
       $$('.day', cal).forEach(x => x.setAttribute('aria-pressed', 'false')); renderSlots();
       $$('.bad', book).forEach(x => x.classList.remove('bad'));
-      $('#bookDone').hidden = true; book.hidden = false; summary(); go(1);
+      $('#bookDone').hidden = true; book.hidden = false; const ms = $('.msum'); if (ms) ms.hidden = false; summary(); go(1);
     });
     summary();
   }
