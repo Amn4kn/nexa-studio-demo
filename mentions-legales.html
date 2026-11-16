@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentions légales — Nexa Studio</title>
+<meta name="description" content="Mentions légales de Nexa Studio : éditeur, hébergement, propriété intellectuelle.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070b14">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/manrope-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="nav nav--solid" id="nav">
+  <div class="wrap nav__in">
+    <a class="logo" href="index.html"><span>Nexa<em>Studio</em></span></a>
+    <a class="btn btn--ghost btn--sm" href="index.html">← Retour au site</a>
+  </div>
+</header>
+<main id="main" class="legal">
+  <div class="wrap">
+    <p class="eyebrow">Informations légales</p>
+    <h1>Mentions légales</h1>
+    <p class="intro">Informations prévues par l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique (LCEN).</p>
+    <p class="warn">Les champs « À fournir » sont à compléter dans <code>config.js</code> avant la mise en ligne. Rien n'a été inventé.</p>
+
+    <h2>Éditeur du site</h2>
+    <dl>
+      <dt>Nom commercial</dt><dd>Nexa Studio</dd>
+      <dt>Dénomination / nom</dt><dd><span data-cfg="legalName" data-todo="dénomination ou nom de l'entrepreneur"></span></dd>
+      <dt>Forme juridique</dt><dd><span data-cfg="legalForm" data-todo="statut juridique"></span></dd>
+      <dt>Adresse</dt><dd><span data-cfg="address" data-todo="adresse du siège ou de domiciliation"></span></dd>
+      <dt>SIRET</dt><dd><span data-cfg="siret" data-todo="numéro SIRET"></span></dd>
+      <dt data-cfg-if="rcs">Immatriculation</dt><dd data-cfg-if="rcs"><span data-cfg="rcs"></span></dd>
+      <dt>TVA</dt><dd><span data-cfg="vat" data-todo="n° de TVA ou mention d'exonération"></span></dd>
+      <dt>E-mail</dt><dd><a data-cfg="email" data-cfg-href="mailto" data-todo="adresse e-mail"></a></dd>
+      <dt data-cfg-if="phone">Téléphone</dt><dd data-cfg-if="phone"><span data-cfg="phone"></span></dd>
+      <dt>Directeur de la publication</dt><dd><span data-cfg="publicationDirector" data-todo="nom du directeur de la publication"></span></dd>
+    </dl>
+
+    <h2>Hébergement</h2>
+    <p><span data-cfg="host" data-todo="nom, adresse et téléphone de l'hébergeur retenu"></span></p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>Les textes, la mise en page, le logo et le code de ce site sont la propriété de leur auteur, sauf mention contraire. Toute reproduction sans autorisation est interdite.</p>
+    <p>Polices Manrope et Instrument Serif : licence SIL Open Font License 1.1. Photos du site de démonstration Maison Vauclair : <a href="https://unsplash.com/license" rel="noopener">licence Unsplash</a>, crédits indiqués sur la page Réalisations de la démo.</p>
+
+    <h2>Site de démonstration</h2>
+    <p>Maison Vauclair, accessible depuis ce site, est un projet de démonstration : le garage, son adresse, son numéro de téléphone (tranche réservée à la fiction) et ses tarifs sont fictifs. Aucune réservation ni demande n'y est enregistrée ou transmise.</p>
+
+    <h2>Données personnelles</h2>
+    <p>Voir la <a href="confidentialite.html">politique de confidentialité</a>. Ce site n'utilise aucun cookie de mesure d'audience ni de publicité.</p>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="logo" href="index.html"><span>Nexa<em>Studio</em></span></a>
+    <nav class="foot__nav" aria-label="Informations légales">
+      <a href="mentions-legales.html" aria-current="page">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cgv.html">Conditions générales</a>
+    </nav>
+  </div>
+</footer>
+<script src="config.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

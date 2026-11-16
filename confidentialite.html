@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Nexa Studio</title>
+<meta name="description" content="Politique de confidentialité de Nexa Studio : données du formulaire, finalités, durées, droits.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070b14">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/manrope-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="nav nav--solid" id="nav">
+  <div class="wrap nav__in">
+    <a class="logo" href="index.html"><span>Nexa<em>Studio</em></span></a>
+    <a class="btn btn--ghost btn--sm" href="index.html">← Retour au site</a>
+  </div>
+</header>
+<main id="main" class="legal">
+  <div class="wrap">
+    <p class="eyebrow">RGPD</p>
+    <h1>Politique de confidentialité</h1>
+    <p class="intro">Comment sont traitées les informations que vous transmettez via le formulaire de contact.</p>
+    <p class="warn">Modèle rédigé à partir des obligations du RGPD, à relire et à adapter à votre situation réelle (prestataires retenus, durées). Les champs « À fournir » se complètent dans <code>config.js</code>.</p>
+
+    <h2>Responsable du traitement</h2>
+    <p><span data-cfg="legalName" data-todo="dénomination ou nom"></span>, <span data-cfg="address" data-todo="adresse"></span>. Contact : <a data-cfg="email" data-cfg-href="mailto" data-todo="adresse e-mail"></a>.</p>
+
+    <h2>Données collectées</h2>
+    <p>Uniquement celles que vous saisissez dans le formulaire de contact : nom, adresse e-mail, téléphone (facultatif), type de projet, message, ainsi que la date de votre consentement.</p>
+    <p>Aucune donnée n'est collectée à votre insu : pas de cookie de mesure d'audience, pas de publicité, pas de traceur tiers. Les polices de caractères sont hébergées sur ce site.</p>
+
+    <h2>Finalité et base légale</h2>
+    <ul>
+      <li><b>Finalité :</b> répondre à votre demande, échanger sur votre projet et, si vous le souhaitez, établir un devis.</li>
+      <li><b>Base légale :</b> mesures précontractuelles prises à votre demande (article 6.1.b du RGPD).</li>
+    </ul>
+    <p>Vos données ne sont ni vendues, ni louées, ni utilisées pour de la prospection sans votre accord.</p>
+
+    <h2>Destinataires et sous-traitants</h2>
+    <ul>
+      <li>La personne en charge de votre demande chez Nexa Studio.</li>
+      <li><b>Formspree</b> (Formspree, Inc., États-Unis), service qui achemine le formulaire jusqu'à notre boîte mail. Ce transfert hors de l'Union européenne doit être encadré par les garanties du prestataire (Data Privacy Framework ou clauses contractuelles types) : <span class="todo">À vérifier avant mise en ligne</span>.</li>
+      <li>L'hébergeur du site : <span data-cfg="host" data-todo="hébergeur retenu"></span>.</li>
+    </ul>
+
+    <h2>Durée de conservation</h2>
+    <p>Les messages restés sans suite sont supprimés au plus tard 3 ans après le dernier contact. Si un contrat est signé, les données nécessaires sont conservées pendant la durée de la relation puis selon les obligations légales (comptables notamment).</p>
+
+    <h2>Vos droits</h2>
+    <p>Vous pouvez accéder à vos données, les rectifier, les effacer, limiter ou vous opposer à leur traitement, et demander leur portabilité, en écrivant à <a data-cfg="email" data-cfg-href="mailto" data-todo="adresse e-mail"></a>. Une réponse vous est apportée dans un délai d'un mois.</p>
+    <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
+
+    <h2>Sécurité</h2>
+    <p>Le site est servi en HTTPS. Le formulaire limite la longueur des champs et filtre les envois automatisés. Seule la personne en charge des demandes a accès aux messages reçus.</p>
+
+    <h2>Site de démonstration Maison Vauclair</h2>
+    <p>Les formulaires de la démo Maison Vauclair ne transmettent ni n'enregistrent aucune donnée : tout reste dans votre navigateur. Les photos d'illustration de la démo sont chargées depuis les serveurs d'Unsplash, qui reçoivent à cette occasion votre adresse IP, comme pour toute image hébergée en ligne.</p>
+
+    <p class="fine">Dernière mise à jour : novembre 2026.</p>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="logo" href="index.html"><span>Nexa<em>Studio</em></span></a>
+    <nav class="foot__nav" aria-label="Informations légales">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html" aria-current="page">Confidentialité</a>
+      <a href="cgv.html">Conditions générales</a>
+    </nav>
+  </div>
+</footer>
+<script src="config.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

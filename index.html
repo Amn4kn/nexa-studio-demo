@@ -3,14 +3,390 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexa Studio — Création de sites web pour TPE, artisans et indépendants</title>
+<meta name="description" content="Nexa Studio conçoit des sites vitrines et landing pages rapides, sur mesure et pensés pour générer des demandes de devis. Maquette validée avant développement, devis détaillé avant tout engagement.">
+<!-- Pré-lancement : à retirer une fois config.js complété et le site validé -->
 <meta name="robots" content="noindex">
-<title>Maison Vauclair — démonstration</title>
-<meta http-equiv="refresh" content="0; url=maison-vauclair/">
-<link rel="canonical" href="maison-vauclair/">
-<script>location.replace('maison-vauclair/');</script>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;font:16px/1.5 system-ui,sans-serif;background:#f3f1ec;color:#141414}a{color:#c2410c}</style>
+<link rel="canonical" href="https://amn4kn.github.io/nexa-studio-demo/">
+<meta property="og:url" content="https://amn4kn.github.io/nexa-studio-demo/">
+<meta property="og:image" content="https://amn4kn.github.io/nexa-studio-demo/assets/maison-vauclair-preview.webp">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Nexa Studio">
+<meta property="og:title" content="Nexa Studio — Création de sites web pour TPE, artisans et indépendants">
+<meta property="og:description" content="Sites vitrines et landing pages rapides, sur mesure. Offre Starter dès 500 €, devis écrit avant tout engagement.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#070b14">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/manrope-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrumentserif-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<p>Redirection vers la démonstration <a href="maison-vauclair/">Maison Vauclair</a>…</p>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="logo" href="#top">
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="url(#lg)"/><path d="M9 23V9l14 14V9" fill="none" stroke="#0a0f1c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#f3dfaa"/><stop offset="1" stop-color="#c79a47"/></linearGradient></defs></svg>
+      <span>Nexa<em>Studio</em></span>
+    </a>
+    <nav id="menu" class="menu" aria-label="Navigation principale">
+      <a href="#realisations">Réalisation</a>
+      <a href="#methode">Méthode</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#apropos">À propos</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--gold btn--sm menu__cta" href="#contact">Parler de mon projet</a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="dot"></span> Création de sites web · artisans, commerces, TPE</p>
+      <h1>Votre site doit <em>vendre</em> aussi bien que vous.</h1>
+      <p class="lead">Des sites rapides et clairs, pensés pour qu'un client vous appelle ou vous demande un devis. Un seul interlocuteur, du premier échange à la mise en ligne.</p>
+      <div class="hero__cta">
+        <a class="btn btn--gold" href="#contact" data-plan="Starter">Démarrer dès 500 € <span aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost" href="#realisations">Voir ce que nous construisons</a>
+      </div>
+      <ul class="hero__facts">
+        <li><strong>Starter dès 500 €</strong> · prêt en 1 semaine</li>
+        <li><strong>Devis écrit</strong> avant tout engagement</li>
+        <li><strong>Site et domaine</strong> à votre nom</li>
+      </ul>
+    </div>
+    <figure class="stage" id="stage">
+      <a class="device device--desktop" href="maison-vauclair/index.html" aria-label="maison-vauclair · démo : ouvrir la démo Maison Vauclair (garage fictif)">
+        <span class="device__bar" aria-hidden="true"><i></i><i></i><i></i><span>maison-vauclair · démo</span></span>
+        <img src="assets/vc-desktop-accueil.webp" srcset="assets/vc-desktop-accueil-720.webp 720w, assets/vc-desktop-accueil.webp 1200w" sizes="(max-width:640px) 92vw, (max-width:960px) 80vw, 600px" width="1200" height="750" decoding="async" alt="Accueil de la démo Maison Vauclair sur ordinateur">
+      </a>
+      <div class="device device--phone" aria-roledescription="carrousel" aria-label="La démo sur téléphone">
+        <div class="phone__screens">
+          <img class="is-on" src="assets/vc-m-accueil.webp" srcset="assets/vc-m-accueil-280.webp 280w, assets/vc-m-accueil.webp 520w" sizes="(max-width:640px) 140px, 196px" width="520" height="960" decoding="async" alt="Accueil de la démo sur téléphone">
+          <img data-src="assets/vc-m-prix.webp" data-srcset="assets/vc-m-prix-280.webp 280w, assets/vc-m-prix.webp 520w" sizes="(max-width:640px) 140px, 196px" width="520" height="960" decoding="async" alt="Prestations et prix sur téléphone">
+          <img data-src="assets/vc-m-rdv.webp" data-srcset="assets/vc-m-rdv-280.webp 280w, assets/vc-m-rdv.webp 520w" sizes="(max-width:640px) 140px, 196px" width="520" height="960" decoding="async" alt="Prise de rendez-vous simulée sur téléphone">
+        </div>
+      </div>
+      <figcaption class="stage__cap">
+        <span class="badge badge--live">Démo réelle · garage fictif</span>
+        <span class="stage__tabs" role="group" aria-label="Écran affiché sur le téléphone">
+          <button type="button" class="is-on" aria-pressed="true" data-screen="0">Accueil</button>
+          <button type="button" aria-pressed="false" data-screen="1">Prix</button>
+          <button type="button" aria-pressed="false" data-screen="2">Rendez-vous</button>
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- RÉALISATION -->
+<section class="sec sec--tight" id="realisations">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="eyebrow">Réalisation · démonstration</p>
+      <h2>Ce que nous savons construire, <em>à tester vous-même.</em></h2>
+      <p class="lead">Maison Vauclair est un garage fictif, mais son site est entièrement développé et testé. Rien n'y est enregistré ni transmis.</p>
+    </header>
+    <div class="showcase">
+      <figure class="show show--desk reveal">
+        <span class="device__bar" aria-hidden="true"><i></i><i></i><i></i><span>prestations · ordinateur</span></span>
+        <img src="assets/vc-desktop-prestations.webp" srcset="assets/vc-desktop-prestations-720.webp 720w, assets/vc-desktop-prestations.webp 1200w" sizes="(max-width:960px) 92vw, 700px" width="1200" height="750" loading="lazy" decoding="async" alt="Page prestations de la démo sur ordinateur, avec les prix de départ">
+        <figcaption><b>Sur ordinateur</b> Prestations et prix « à partir de », réservation en un clic.</figcaption>
+      </figure>
+      <div class="show__phones" tabindex="0" role="region" aria-label="Captures sur téléphone (faire défiler horizontalement sur mobile)">
+        <figure class="show">
+          <img src="assets/vc-m-accueil.webp" width="520" height="960" loading="lazy" decoding="async" alt="Accueil de la démo sur téléphone">
+          <figcaption><b>Sur téléphone</b> Appeler ou réserver en un geste.</figcaption>
+        </figure>
+        <figure class="show reveal">
+          <img src="assets/vc-m-rdv.webp" width="520" height="960" loading="lazy" decoding="async" alt="Prise de rendez-vous simulée : calendrier et créneaux">
+          <figcaption><b>Réservation simulée</b> Sur téléphone : calendrier et créneaux fictifs dans la démo.</figcaption>
+        </figure>
+        <figure class="show reveal">
+          <img src="assets/vc-m-devis.webp" width="520" height="960" loading="lazy" decoding="async" alt="Demande de devis avec ajout de photos sur téléphone">
+          <figcaption><b>Devis avec photos</b> Sur téléphone : le client décrit, photographie, envoie.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="case__cta reveal">
+      <a class="btn btn--gold" href="maison-vauclair/index.html">Ouvrir la démo <span aria-hidden="true">→</span></a>
+      <a class="btn btn--ghost" href="maison-vauclair/rendez-vous.html">Tester la réservation simulée</a>
+      <p class="fine">Pour un vrai client, la réservation devient un formulaire de demande ou un lien vers son outil existant : nous ne vendons pas d'agenda connecté. Photos d'illustration Unsplash.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODE + ENGAGEMENTS -->
+<section class="sec" id="methode">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="eyebrow">Méthode</p>
+      <h2>Quatre étapes, <em>zéro surprise.</em></h2>
+    </header>
+    <ol class="steps">
+      <li class="reveal"><span>1</span><h3>Cadrage</h3><p>Un échange gratuit pour comprendre votre activité et vos clients. Vous recevez un devis détaillé.</p></li>
+      <li class="reveal"><span>2</span><h3>Maquette</h3><p>Structure et design de vos pages. Rien n'est développé avant votre validation.</p></li>
+      <li class="reveal"><span>3</span><h3>Développement</h3><p>Intégration, tests sur téléphone et ordinateur, vérification de la vitesse et de l'accessibilité.</p></li>
+      <li class="reveal"><span>4</span><h3>Lancement</h3><p>Mise en ligne, test d'envoi réel du formulaire, corrections incluses pendant la durée prévue au devis.</p></li>
+    </ol>
+    <div class="pledges reveal">
+      <h3>Nos engagements <small>Pas de promesse de trafic ou de chiffre d'affaires : personne ne peut honnêtement les garantir. Voici ce qui dépend de nous.</small></h3>
+      <ul>
+        <li><b>Prix du devis = prix facturé.</b> Tout changement est chiffré et validé avant d'être réalisé.</li>
+        <li><b>Vous restez propriétaire.</b> Domaine, contenus et code vous appartiennent à la livraison.</li>
+        <li><b>Performance mesurée.</b> Score Lighthouse visé ≥ 90, mesuré et transmis avant livraison.</li>
+        <li><b>Rien de vendu qui ne soit livrable.</b> Chaque fonctionnalité est étudiée avant d'être chiffrée.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section class="sec sec--alt" id="tarifs">
+  <div class="wrap">
+    <header class="sec__head reveal">
+      <p class="eyebrow">Offres</p>
+      <h2>Démarrer dès 500 €, <em>évoluer ensuite.</em></h2>
+      <p class="lead">Un échange gratuit, puis un devis écrit : périmètre, délai, prix. Vous ne vous engagez qu'après l'avoir validé.</p>
+    </header>
+    <div class="plans">
+      <article class="plan plan--hot card reveal">
+        <span class="ribbon">Pour démarrer</span>
+        <h3>Starter</h3>
+        <p class="plan__for">1 page à partir d'un modèle testé, adaptée à votre activité</p>
+        <p class="price"><small>dès</small> 500 €</p>
+        <p class="plan__time">1 semaine · 1 tour de modifications</p>
+        <a class="btn btn--gold btn--block" href="#contact" data-plan="Starter">Demander mon Starter</a>
+        <details class="plan__more"><summary>Ce qui est inclus</summary><ul>
+          <li class="y">Prestations, horaires, adresse, appel en un geste</li>
+          <li class="y">Formulaire relié à votre boîte mail</li>
+          <li class="y">Mobile d'abord, rapide, HTTPS</li>
+          <li class="y">Mise en ligne sur votre domaine</li>
+          <li class="n">Pages supplémentaires, rédaction : non incluses</li>
+        </ul></details>
+      </article>
+      <article class="plan card reveal">
+        <h3>Landing page premium</h3>
+        <p class="plan__for">1 page dessinée sur mesure pour une offre ou une campagne</p>
+        <p class="price price--quote">Sur devis</p>
+        <p class="plan__time">2 à 3 semaines · 2 tours de modifications</p>
+        <a class="btn btn--ghost btn--block" href="#contact" data-plan="Landing page premium">Demander un devis</a>
+        <details class="plan__more"><summary>Ce qui est inclus</summary><ul>
+          <li class="y">Jusqu'à 6 sections, design sur mesure</li>
+          <li class="y">Formulaire relié à votre boîte mail</li>
+          <li class="y">Bases du référencement</li>
+          <li class="y">Mise en ligne sur votre domaine</li>
+        </ul></details>
+      </article>
+      <article class="plan card reveal">
+        <h3>Site vitrine</h3>
+        <p class="plan__for">Jusqu'à 5 pages sur mesure, création ou refonte</p>
+        <p class="price price--quote">Sur devis</p>
+        <p class="plan__time">4 à 6 semaines · 2 tours de modifications</p>
+        <a class="btn btn--ghost btn--block" href="#contact" data-plan="Site vitrine professionnel">Demander un devis</a>
+        <details class="plan__more"><summary>Ce qui est inclus</summary><ul>
+          <li class="y">Design sur mesure, mobile d'abord</li>
+          <li class="y">Formulaire relié à votre boîte mail</li>
+          <li class="y">Référencement local de base</li>
+          <li class="y">Redirection des anciennes pages (refonte)</li>
+          <li class="y">Mise en ligne sur votre domaine</li>
+        </ul></details>
+      </article>
+      <article class="plan card reveal">
+        <h3>Sur mesure</h3>
+        <p class="plan__for">Plus de pages ou un besoin particulier</p>
+        <p class="price price--quote">Sur étude</p>
+        <p class="plan__time">Délai fixé après l'étude de faisabilité</p>
+        <a class="btn btn--ghost btn--block" href="#contact" data-plan="Site sur mesure">Présenter mon besoin</a>
+        <details class="plan__more"><summary>Comment ça marche</summary><ul>
+          <li class="y">Étude de faisabilité avant tout devis</li>
+          <li class="y">Fonctionnalités chiffrées seulement si nous savons les livrer</li>
+          <li class="n">Boutique et réservation en ligne : pas proposées pour le moment</li>
+        </ul></details>
+      </article>
+    </div>
+    <details class="compare reveal">
+      <summary>Comparer les 4 offres</summary>
+      <div class="compare__wrap" tabindex="0" role="region" aria-label="Tableau comparatif des offres">
+        <table>
+          <thead><tr><th scope="col"></th><th scope="col">Starter</th><th scope="col">Landing premium</th><th scope="col">Site vitrine</th><th scope="col">Sur mesure</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Pages</th><td>1</td><td>1 (6 sections)</td><td>jusqu'à 5</td><td>selon besoin</td></tr>
+            <tr><th scope="row">Conception</th><td>modèle adapté</td><td>sur mesure</td><td>sur mesure</td><td>sur mesure</td></tr>
+            <tr><th scope="row">Modifications incluses</th><td>1 tour</td><td>2 tours</td><td>2 tours</td><td>au devis</td></tr>
+            <tr><th scope="row">Délai indicatif</th><td>1 semaine</td><td>2-3 semaines</td><td>4-6 semaines</td><td>après étude</td></tr>
+            <tr><th scope="row">Prix</th><td>dès 500 €</td><td>sur devis</td><td>sur devis</td><td>sur étude</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    <p class="plans__note reveal"><span>Inclus partout :</span> mobile d'abord · pages rapides · accessibilité contrôlée · site et domaine à votre nom. Prix Starter : <span data-cfg="priceMention" data-todo="mention HT / TTC ou TVA non applicable"></span>. Nom de domaine (≈ 10 à 15 €/an) à votre charge.</p>
+
+    <div class="sim reveal" id="simulateur">
+      <form class="sim__form" id="sim" novalidate>
+        <h3 class="sim__title">Préparez votre demande <small>1 minute, sans engagement</small></h3>
+        <fieldset>
+          <legend>Votre projet</legend>
+          <div class="chips">
+            <label class="chip-opt"><input type="radio" name="type" value="starter" checked><span>Starter</span></label>
+            <label class="chip-opt"><input type="radio" name="type" value="landing"><span>Landing page</span></label>
+            <label class="chip-opt"><input type="radio" name="type" value="vitrine"><span>Site vitrine</span></label>
+            <label class="chip-opt"><input type="radio" name="type" value="refonte"><span>Refonte</span></label>
+            <label class="chip-opt"><input type="radio" name="type" value="mesure"><span>Sur mesure</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="sim__pages">
+          <legend>Nombre de pages : <output id="pagesOut">1</output></legend>
+          <input type="range" id="pages" min="1" max="15" value="1" aria-label="Nombre de pages">
+        </fieldset>
+        <fieldset>
+          <legend>Vous avez déjà</legend>
+          <div class="chips">
+            <label class="chip-opt"><input type="checkbox" name="has" value="textes"><span>Vos textes</span></label>
+            <label class="chip-opt"><input type="checkbox" name="has" value="photos"><span>Vos photos</span></label>
+            <label class="chip-opt"><input type="checkbox" name="has" value="logo"><span>Un logo</span></label>
+            <label class="chip-opt"><input type="checkbox" name="has" value="domaine"><span>Un nom de domaine</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Échéance</legend>
+          <div class="chips">
+            <label class="chip-opt"><input type="radio" name="when" value="souple" checked><span>Souple</span></label>
+            <label class="chip-opt"><input type="radio" name="when" value="date"><span>Date précise</span></label>
+          </div>
+        </fieldset>
+      </form>
+      <aside class="sim__res" aria-live="polite" aria-label="Récapitulatif de votre demande">
+        <p class="eyebrow">Votre demande</p>
+        <p class="sim__price" id="simPrice">—</p>
+        <p class="sim__delay" id="simDelay"></p>
+        <ul class="sim__sum" id="simSum"></ul>
+        <a class="btn btn--gold btn--block" href="#contact" id="simGo">Envoyer cette demande <span aria-hidden="true">→</span></a>
+        <p class="fine">Le prix final figure sur le devis, établi après un échange gratuit.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section class="sec" id="apropos">
+  <div class="wrap about">
+    <div class="about__card reveal">
+      <div class="about__avatar" id="avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="40" height="40"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      </div>
+      <p class="about__name" data-cfg="founderName" data-todo="prénom et nom"></p>
+      <p class="about__role" data-cfg="founderRole" data-todo="votre métier"></p>
+      <p class="about__city"><span data-cfg="city" data-todo="ville"></span></p>
+    </div>
+    <div class="about__copy reveal">
+      <p class="eyebrow">À propos</p>
+      <h2>Une personne, <em>pas un standard téléphonique.</em></h2>
+      <p class="about__bio" data-cfg="founderBio" data-todo="2–3 phrases vraies sur votre parcours"></p>
+      <ul class="contact__list">
+        <li>La même personne du premier échange à la mise en ligne</li>
+        <li>Zone d'intervention : <span data-cfg="area" data-todo="zone d'intervention"></span></li>
+        <li>Un devis écrit avant tout engagement</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec--alt" id="faq">
+  <div class="wrap faq">
+    <header class="sec__head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Questions <em>fréquentes.</em></h2>
+    </header>
+    <div class="faq__list reveal">
+      <details><summary>Combien de temps faut-il pour créer un site ?</summary><p>À titre indicatif, 2 à 3 semaines pour une landing page et 4 à 6 semaines pour un site vitrine. Le délai réel dépend surtout de la rapidité des retours et de la fourniture des contenus ; il est précisé dans le devis.</p></details>
+      <details><summary>Dois-je fournir mes textes et mes photos ?</summary><p>Idéalement oui, nous vous guidons sur ce qui est nécessaire. Nous pouvons vous aider à les rédiger, sur devis. Pour les photos, de vraies photos de votre activité convainquent toujours mieux que des images de banque.</p></details>
+      <details><summary>Proposez-vous la réservation en ligne ?</summary><p>Pas encore en standard, et nous ne la vendons pas tant qu'elle n'est pas prête. La démo Maison Vauclair en montre l'interface, mais un vrai système exige aussi la gestion des disponibilités, des confirmations et des annulations. Si c'est essentiel pour vous, parlons-en : nous étudierons la faisabilité avant tout chiffrage.</p></details>
+      <details><summary>Créez-vous des boutiques en ligne ?</summary><p>Pas pour le moment. Nous ne proposerons cette prestation qu'après avoir développé et testé une démonstration complète (paiement, commandes, conditions de vente).</p></details>
+      <details><summary>Puis-je modifier mon site moi-même ensuite ?</summary><p>Pas directement pour l'instant : nos sites n'ont pas d'interface d'administration. Les modifications sont faites par nous et chiffrées à l'avance. Si l'autonomie est indispensable pour vous, dites-le dès le premier échange : nous étudierons une solution avant de vous la proposer.</p></details>
+      <details><summary>Que comprend le devis ?</summary><p>Conception, développement, mise en ligne et tours de modifications prévus. Le nom de domaine (environ 10 à 15 € par an, payé directement par vous) et l'éventuel hébergement payant sont indiqués séparément. Pour un site vitrine, un hébergement gratuit suffit le plus souvent.</p></details>
+      <details><summary>Que deviennent les informations du formulaire ?</summary><p>Elles servent uniquement à répondre à votre demande et ne sont jamais revendues. Le détail figure dans la <a href="confidentialite.html">politique de confidentialité</a>.</p></details>
+      <details><summary>Garantissez-vous une première place sur Google ?</summary><p>Non, et méfiez-vous de ceux qui le promettent. Nous posons des bases techniques et éditoriales solides, mais le classement dépend de nombreux facteurs externes.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="wrap contact">
+    <div class="contact__copy reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Parlons de <em>votre projet.</em></h2>
+      <p class="lead">Quelques lignes suffisent. Chaque demande reçoit une réponse personnelle<span data-cfg-if="responseDelay"> sous <span data-cfg="responseDelay"></span></span>, avec une proposition d'échange.</p>
+      <ul class="contact__list">
+        <li>Premier échange gratuit et sans engagement</li>
+        <li>Devis écrit et détaillé</li>
+        <li>Vos informations ne sont jamais revendues</li>
+      </ul>
+      <dl class="contact__direct">
+        <div><dt>E-mail</dt><dd><a data-cfg="email" data-cfg-href="mailto" data-todo="adresse e-mail"></a></dd></div>
+        <div data-cfg-if="phone"><dt>Téléphone</dt><dd><a data-cfg="phone" data-cfg-href="tel"></a></dd></div>
+      </dl>
+    </div>
+    <div class="contact__box reveal">
+      <form id="contactForm" novalidate>
+        <p class="notice notice--top" data-offline hidden><b>Envoi non activé :</b> ce formulaire ne transmet encore aucun message. Il sera relié à notre boîte mail avant la mise en ligne du site.</p>
+        <div class="hp" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <div class="row">
+          <div class="field"><label for="name">Nom *</label><input id="name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="e-name"><p class="err" id="e-name" role="alert"></p></div>
+          <div class="field"><label for="email">E-mail *</label><input id="email" name="email" type="email" autocomplete="email" maxlength="160" required aria-describedby="e-email"><p class="err" id="e-email" role="alert"></p></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="phone">Téléphone <span class="opt-l">(facultatif)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="20" aria-describedby="e-phone"><p class="err" id="e-phone" role="alert"></p></div>
+          <div class="field"><label for="kind">Projet *</label>
+            <select id="kind" name="kind" required aria-describedby="e-kind">
+              <option value="">Choisir…</option><option>Site Starter</option><option>Site vitrine</option><option>Landing page</option><option>Refonte de site</option><option>Site sur mesure</option><option>Autre</option>
+            </select><p class="err" id="e-kind" role="alert"></p></div>
+        </div>
+        <div class="field"><label for="msg">Votre projet *</label><textarea id="msg" name="msg" rows="5" maxlength="3000" required aria-describedby="e-msg msgCount" placeholder="Votre activité, ce que vous attendez du site, une échéance éventuelle…"></textarea><p class="count" id="msgCount">0 / 3000</p><p class="err" id="e-msg" role="alert"></p></div>
+        <label class="check"><input type="checkbox" id="rgpd" name="rgpd" required aria-describedby="e-rgpd"><span>J'accepte que ces informations soient utilisées pour répondre à ma demande, conformément à la <a href="confidentialite.html">politique de confidentialité</a>. *</span></label>
+        <p class="err" id="e-rgpd" role="alert"></p>
+        <button class="btn btn--gold btn--block" type="submit">Envoyer ma demande</button>
+        <p class="err err--send" id="e-send" role="alert"></p>
+      </form>
+      <div class="ok" id="ok" hidden tabindex="-1">
+        <div class="ok__ico" aria-hidden="true">✓</div>
+        <h3>Votre demande a bien été envoyée.</h3>
+        <p>Nous vous répondrons à l'adresse <b id="okMail"></b><span data-cfg-if="responseDelay"> sous <span data-cfg="responseDelay"></span></span>. Pensez à vérifier vos courriers indésirables.</p>
+        <button class="btn btn--ghost" id="again" type="button">Envoyer une autre demande</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="logo" href="#top"><span>Nexa<em>Studio</em></span></a>
+      <p class="foot__id">© 2026 Nexa Studio · <span data-cfg="city" data-todo="ville"></span> · SIRET <span data-cfg="siret" data-todo="SIRET"></span></p>
+      <p>Maison Vauclair est un site de démonstration : garage, adresse et tarifs fictifs.</p>
+    </div>
+    <nav class="foot__nav" aria-label="Informations légales">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cgv.html">Conditions générales</a>
+      <a href="#top">Haut de page ↑</a>
+    </nav>
+  </div>
+</footer>
+
+<aside class="mcta" id="mcta" aria-label="Action rapide"><a class="btn btn--gold btn--block" href="#contact" data-plan="Starter">Démarrer dès 500 €</a></aside>
+<script src="config.js" defer></script>
+<script src="app.js" defer></script>
 </body>
 </html>
